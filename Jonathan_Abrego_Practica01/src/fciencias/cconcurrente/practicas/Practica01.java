@@ -268,7 +268,7 @@ public class Practica01 extends javax.swing.JFrame {
     }//GEN-LAST:event_barra5MouseEntered
 
     private void colorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorMouseClicked
-        // TODO add your handling code here:
+        // TODO add your handling code here:        
         barra1.setVisible(false);
         barra2.setVisible(false);
         barra3.setVisible(false);
