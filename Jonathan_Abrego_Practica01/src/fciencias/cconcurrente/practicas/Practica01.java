@@ -5,13 +5,14 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 /**
- *
+ * Practica 1 de hilos y eventos 
  * @author jonathan
  */
 public class Practica01 extends javax.swing.JFrame {
 
     /**
      * Creates new form Practica01
+     * Constructor 
      */
     public Practica01() {
         COUNT_LIMIT = Integer.MAX_VALUE /112;
@@ -190,7 +191,8 @@ public class Practica01 extends javax.swing.JFrame {
         color.setText("Barras");
         color.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                colorMouseClicked(evt);
+               barra2.setVisible(false);
+               barra4.setVisible(false);
             }
         });
         jMenuBar1.add(color);
@@ -237,45 +239,71 @@ public class Practica01 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents    
 
+    /**
+     * Metodo para modificar un label, cuando se hace click sobre
+     * el button creado
+     * @param evt 
+     */
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
         jLabel1.setText("Iniciando");
     }//GEN-LAST:event_jButton1MouseClicked
 
+    /**
+     * Metodo que se usa para ediatr el label cuando el mouse 
+     * entra en la zona de la barra
+     * @param evt 
+     */
     private void barra1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barra1MouseEntered
         // TODO add your handling code here:
         jLabel1.setText("Barra1");
     }//GEN-LAST:event_barra1MouseEntered
 
+    /**
+     * Metodo que se usa para ediatr el label cuando el mouse 
+     * entra en la zona de la barra
+     * @param evt 
+     */
     private void barra2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barra2MouseEntered
         // TODO add your handling code here:
         jLabel1.setText("Barra2");
     }//GEN-LAST:event_barra2MouseEntered
 
+    /**
+     * Metodo que se usa para ediatr el label cuando el mouse 
+     * entra en la zona de la barra
+     * @param evt 
+     */
     private void barra3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barra3MouseEntered
         // TODO add your handling code here:
         jLabel1.setText("Barra3");
     }//GEN-LAST:event_barra3MouseEntered
 
+    /**
+     * Metodo que se usa para ediatr el label cuando el mouse 
+     * entra en la zona de la barra
+     * @param evt 
+     */
     private void barra4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barra4MouseEntered
         // TODO add your handling code here:
         jLabel1.setText("Barra4");
     }//GEN-LAST:event_barra4MouseEntered
 
+    /**
+     * Metodo que se usa para ediatr el label cuando el mouse 
+     * entra en la zona de la barra
+     * @param evt 
+     */
     private void barra5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barra5MouseEntered
         // TODO add your handling code here:
         jLabel1.setText("Barra5");
-    }//GEN-LAST:event_barra5MouseEntered
+    }//GEN-LAST:event_barra5MouseEntered    
 
-    private void colorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorMouseClicked
-        // TODO add your handling code here:        
-        barra1.setVisible(false);
-        barra2.setVisible(false);
-        barra3.setVisible(false);
-        barra4.setVisible(false);
-        barra5.setVisible(false);
-    }//GEN-LAST:event_colorMouseClicked
-
+    /**
+     * Metodo que se usa para ediatr el label cuando el mouse 
+     * entra en la zona de la barra
+     * @param evt 
+     */
     private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
         // TODO add your handling code here:
         areaPrincipal.setBackground(Color.YELLOW);
@@ -333,9 +361,12 @@ public class Practica01 extends javax.swing.JFrame {
     private long counter;
     private final long COUNT_LIMIT;
 
+    /**
+     * Clase privada para crear objetos 
+     */
     private class Trabajador extends Thread {
 
-        String nombre; //nombre del animal
+        String nombre; //nombre del trabajador
         int limite;
         JPanel panel;
 
